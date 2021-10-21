@@ -14,8 +14,8 @@ function Brands({brand,style}) {
    }
     return (
         <div style={style} className={` brand ${selectedBrands.includes(brand.slug) ? 'active' : ''}`}>
-            <h5 onClick={selectBrand}>{brand.title}</h5>
-            <div className="brand-colors">
+            <h5>{brand.title}</h5>
+            <div onClick={selectBrand} className="brand-colors">
                 {brand.colors.map(colors=>{
                     return (
                     <ClipboardButton key={colors} data-clipboard-text={colors} onSuccess={()=>{
