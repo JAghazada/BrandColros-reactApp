@@ -40,11 +40,11 @@ function App() {
     
   return (
     <MainContext.Provider value={data}>
-     
+      { copied && <Copied color={copied}/>}
     <BrowserRouter>
       <Switch>
           <Route  path='/' exact>
-          { copied && <Copied color={copied}/>}
+          
         <Sidebar/>
                 <Main/>
           </Route>
